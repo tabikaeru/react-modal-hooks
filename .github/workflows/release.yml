@@ -7,6 +7,10 @@ on:
       - main
     tags:
       - '!*'
+permissions:
+  id-token: write
+  contents: read
+  actions: read
 
 jobs:
   release:
