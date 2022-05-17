@@ -1,5 +1,5 @@
 {
-  "name": "react-modal-hooks",
+  "name": "@tabikaeru/react-modal-hooks",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -11,7 +11,21 @@
     "build:common": "tsc",
     "build:esm": "tsc -p tsconfig.esm.json"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint './**/*.{ts,tsx}'"
+    ]
+  },
   "author": "tabikaeru",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabikaeru/react-modal-hooks"
+  },
   "files": [
     "dist/*"
   ],
@@ -19,7 +33,18 @@
   "devDependencies": {
     "@types/node": "^17.0.34",
     "@types/react": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4",
+    "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
