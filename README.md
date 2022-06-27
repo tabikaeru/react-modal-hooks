@@ -12,7 +12,7 @@ const MyModal = ({isVisible, onClose})=>(
 )
 
 const Page = ()=>{
-    const [isVisible, onOpen, onClose] = useModal()
+    const {isVisible, onOpen, onClose }= useModal()
     return (
         <Fragment>
             <div>
