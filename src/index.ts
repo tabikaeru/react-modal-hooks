@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-export const useModal = (): [boolean, () => void, () => void] => {
+export const useModal = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const onOpen = useCallback(() => {
     setIsVisible(true)
@@ -8,5 +8,5 @@ export const useModal = (): [boolean, () => void, () => void] => {
   const onClose = useCallback(() => {
     setIsVisible(false)
   }, [])
-  return [isVisible, onOpen, onClose]
+  return { isVisible, onOpen, onClose }
 }
